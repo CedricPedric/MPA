@@ -1,0 +1,90 @@
+
+body{
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+.MainContainer{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+
+}
+.ImageDiv{
+  flex-grow: 1;
+  background-image: url("./images/background2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.NavBarVertical{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  left: 0px;
+  background-color: rgb(0, 0, 0);
+  height: 100%;
+  margin: 0px;
+}
+
+.MusicContainer{
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: gray;
+  width: 202px;
+  height: 250px;
+  margin-left: 10px;
+  // text-align: center;
+}
+
+.CardImages{
+  margin: 9%;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  width: 160px;
+  height: 150px;
+}
+
+.GenreContainer{
+  display: flex;
+}
+
+.GenreText{
+  margin: 5px;
+}
+
+
+.GenreCard{
+  background-color: gray;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.MusicTitle{
+  margin: 0px;
+  margin-top: 10px;
+  margin-left: 3px;
+}
+.Description{
+  margin: 0px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.MusicCardContainers{
+  display: flex;
+}
+
+.NavBarTitle{
+  font-size: 30px;
+}
+.NavBarText{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
