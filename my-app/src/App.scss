@@ -11,22 +11,11 @@ body{
   margin: 0px;
 
 }
-.ImageDiv{
+.HomePage{
   flex-grow: 1;
   background-image: url("./images/background2.png");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.NavBarVertical{
-  color: white;
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  left: 0px;
-  background-color: rgb(0, 0, 0);
-  height: 100%;
-  margin: 0px;
 }
 
 .MusicContainer{
@@ -38,11 +27,11 @@ body{
   width: 202px;
   height: 250px;
   margin-left: 10px;
-  // text-align: center;
+  text-align: center;
 }
 
 .CardImages{
-  margin: 9%;
+  align-self: center;
   margin-top: 15px;
   margin-bottom: 0px;
   border-radius: 5px;
@@ -81,10 +70,3 @@ body{
   display: flex;
 }
 
-.NavBarTitle{
-  font-size: 30px;
-}
-.NavBarText{
-  font-size: 25px;
-  margin-bottom: 10px;
-}

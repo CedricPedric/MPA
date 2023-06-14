@@ -1,0 +1,22 @@
+.NavBarVertical{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+    left: 0px;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    margin: 0px;
+}
+
+.NavBarTitle{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.NavBarText{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}

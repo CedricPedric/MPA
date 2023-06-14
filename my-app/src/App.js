@@ -1,5 +1,9 @@
 import './App.scss';
-import image from './images/ArticMonkeys.jpg';
+import React, {useEffect, useState} from "react";
+import Navbar from './navbar/Navbar';
+import HomePage from './homepage/HomePage';
+import Library from './library/Library';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 //   BrowserRouter as Router,
 //   Switch,
 //   Route,
@@ -9,57 +13,31 @@ import image from './images/ArticMonkeys.jpg';
 const App = () =>{
   return (
     <div className='MainContainer'>
-      <nav className='NavBarVertical'>
-        <h2 className='NavBarTitle'>CF Music</h2>
-        <a className='NavBarText'>Home</a>
-        <a className='NavBarText'>Search</a>
-        <a className='NavBarText'>Library</a>
-      </nav>
+      <Navbar/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>  
+          <Route path='/Library' element={<Library/>}/>
 
-      <div className='ImageDiv'>
-        <h1>This is a Page!</h1>
-
-        <div className='GenreContainer'>
-          <div className='GenreCard'>
-            <h2 className='GenreText'>Rock</h2>
-          </div>
-
-          <div className='GenreCard'>
-            <h2 className='GenreText'> Pop</h2>
-          </div>
-
-          <div className='GenreCard'>
-            <h2 className='GenreText'>Classical</h2>
-          </div>
-
-          <div className='GenreCard'>
-            <h2 className='GenreText'>Rap</h2>
-          </div>
-
-          <div className='GenreCard'>
-            <h2 className='GenreText'>Jazz</h2>
-          </div>
-        </div>
-
-
-        <div className='MusicCardContainers'>
-        <div className='MusicContainer'>
-          <img className='CardImages' src={image} alt="Logo"></img>
-          <h2 className='MusicTitle'>Insert Music Title</h2>
-          <p className='Description'>description</p>
-        </div>
-
-        <div className='MusicContainer'>
-          <img className='CardImages' src={image} alt="Logo"></img>
-          <h2 className='MusicTitle'>Insert Music Title</h2>
-          <p className='Description'>description</p>
-        </div>
-
-        </div>
-
-      </div>
+        </Routes> 
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+
+// const ShowMusic = ({backendData}) => {
+//   return ( 
+//     <div>
+//       {backendData.map((data, index) => {
+//         return (
+//           <div>
+//             {data}
+//           </div>
+//         )
+//       })}
+      
+//     </div>
+//   )
+// }

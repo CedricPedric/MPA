@@ -1,0 +1,27 @@
+.MusicCard{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: gray;
+    width: 202px;
+    height: 253px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.MusicCardImages{
+    align-self: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    width: 160px;
+    height: 150px;
+}
+
+.Description{
+    margin: 0px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+    

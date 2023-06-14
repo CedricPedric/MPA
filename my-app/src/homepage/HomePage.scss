@@ -1,0 +1,25 @@
+.HomePage{
+flex-grow: 1;
+background-image: url("../images/background2.png");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.GenreContainer{
+display: flex;
+}
+
+.GenreText{
+margin: 5px;
+}
+
+.GenreCard{
+background-color: gray;
+border-radius: 15px;
+padding: 5px;
+margin: 5px;
+}
+
+.MusicCardContainers{
+display: flex;
+}
