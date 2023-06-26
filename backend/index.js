@@ -49,6 +49,28 @@ Music.init({
 });
 
 
+class User extends Model { }
+
+User.init({
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+    },
+    name: {
+        type: Sequelize.STRING
+    },
+    password: {
+        type: Sequelize.STRING
+    },
+
+}, {
+    timestamps: false,
+    sequelize,
+    modelName: 'users'
+});
+
+
 app.get("/api/music", (req, res) => {
 
     Music.findAll({
@@ -67,11 +89,29 @@ app.get("/api/music", (req, res) => {
 
 });
 
+async function getUser(req) {
+    let data = req.body;
+    console.log(data);
+
+    const x = await User.findOne({ where: { name: data.name, password: data.password } });
+    if (x === null) {
+        console.log('Not found!');
+    } else {
+        console.log(x instanceof User); // true
+        console.log(x.name); // 'My Title'
+    }
+}
+app.post("/api/getuser", (req, res) => {
+    getUser(req);
+}
+)
+
 app.post('/api/addmusic', (req, res) => {
     let data = req.body;
     /*res.send('Data Received: ' + JSON.stringify(data));*/
     console.log(data)
 })
+
 
 
 app.listen(port, () => {

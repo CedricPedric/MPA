@@ -16,7 +16,6 @@ const Library = () =>{
     return(
         <div className="CardContainers">
             {!data ? "Loading..." :   <Content data={data}/>}
-            <button onClick={() => AddToLibrary("test","test","test","test")}>click me</button>
         </div>
     )
 }
@@ -34,20 +33,5 @@ const Content = ({ data }) => {
 }
 
 
-const AddToLibrary = (title,artist,genre,image) => {
-    console.log(title)
 
-    fetch('/api/addmusic', {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: title,
-            artist: artist,
-            genre: genre,
-            image: image,
-        })
-    }).then(() => console.log("its been pressed"))
-}
 export default Library

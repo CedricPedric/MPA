@@ -1,8 +1,9 @@
 import './App.scss';
-import React, {useEffect, useState} from "react";
+import React  from "react";
 import Navbar from './navbar/Navbar';
 import HomePage from './homepage/HomePage';
 import Library from './library/Library';
+import LoginPage from './loginpage/LoginPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //   BrowserRouter as Router,
 //   Switch,
@@ -18,7 +19,7 @@ const App = () =>{
         <Routes>
           <Route path='/' element={<HomePage/>}/>  
           <Route path='/Library' element={<Library/>}/>
-
+          <Route path='/LoginPage' element={<LoginPage/>}/>
         </Routes> 
       </BrowserRouter>
     </div>
